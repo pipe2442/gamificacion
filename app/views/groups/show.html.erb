@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @group.name %>
+</p>
+
+<p>
+  <strong>Ecoins:</strong>
+  <%= @group.ecoins %>
+</p>
+
+<p> 
+  <% @group.students.each do |student| %>
+    <%= student.name %>
+    <%= student.email %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>
